@@ -6,6 +6,7 @@ import axios from "axios";
 
 export default function Register() {
     const [type, setType] = useState("password");
+    const [error, setError] = useState(false);
     const [user, setUser] = useState([]);
     const [fbimg, setFbimg] = useState("");
     const [isloggedin, setIsloggedin] = useState(false);
@@ -27,6 +28,7 @@ export default function Register() {
                 setIsloggedin(true)
             })
             .catch(err => {
+                setError(true)
                 console.log(err)
             })
     }
@@ -40,6 +42,7 @@ export default function Register() {
                 setIsloggedin(true)
             })
             .catch(err => {
+                setError(true)
                 console.log(err)
             })
     }
@@ -52,16 +55,23 @@ export default function Register() {
 
     const register = async () => {
         try {
-            const res = await axios.post('https://reqres.in/api/users', {
-                firstname:fname.current.value,
-                lastname:lname.current.value,
-                email: email.current.value,
-                password: password.current.value
-            });
-            setUser(res.data)
-            console.log(res.data)
-            setIsloggedin(true)
+                if(fname.current.value === "" ||lname.current.value === "" ||email.current.value === "" ||password.current.value === ""|| !(/.+@.+\.[A-Za-z]+$/.test(email.current.value)))
+                {
+                    setError(true);
+                } 
+                else 
+                {
+                    const res = await axios.post('https://reqres.in/api/users', {
+                        firstname:fname.current.value,
+                        lastname:lname.current.value,
+                        email: email.current.value,
+                        password: password.current.value
+                    });
+                    setUser(res.data)
+                    setIsloggedin(true)
+                }
         } catch (err) {
+            setError(true)
             console.error(err);
         }
     };
@@ -96,6 +106,14 @@ export default function Register() {
                         <div className="separation">
                             or
                         </div>
+                        {error?(
+                            <div className="error">
+                                <span className="error-text">
+                                        Either some details are missing or user has entered wrong data.
+                                </span>
+                            </div>
+                        ):(<></>)}
+
                         <div className="form">
                             <div className="textInput">
                                 <input type="text" placeholder="First Name" ref={fname}></input>

@@ -112,6 +112,16 @@ padding-bottom: 80px;
   margin: 0 0px 0px 10px;
 }
 
+.error{
+  text-align: center;
+}
+
+.error-text{
+  color: red;
+  font-size: 15px;
+  font-weight: 500;
+}
+
 .form{
   margin: 10px 0px;
 }
@@ -215,7 +225,7 @@ padding-bottom: 80px;
 }
 
 
-
+/* Extra large devices (large laptops and desktops, 1500px ) */
 @media only screen and (max-width: 1500px) {
   .main_container{
     width: 60%;
@@ -232,7 +242,7 @@ padding-bottom: 80px;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* Large devices (laptops and desktops, 1300px ) */
 @media only screen and (max-width: 1300px) {
   .main_container{
     width: 70%;
@@ -246,7 +256,7 @@ padding-bottom: 80px;
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 1100px) */
 @media only screen and (max-width: 1100px) {
   .main_container{
     width: 80%;
@@ -352,7 +362,7 @@ padding-bottom: 80px;
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 600px) */
 @media only screen and (max-width: 600px) {  
   .main_container{
     width: 100%;
