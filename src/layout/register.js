@@ -1,25 +1,28 @@
 import React, { useState } from 'react'
 
-import firebase from '../config/firebase'
+import firebase from '../config/firebase' //Firebase Configuartion File
 import axios from "axios";
 
-
 export default function Register() {
-    const [type, setType] = useState("password");
-    const [error, setError] = useState(false);
-    const [user, setUser] = useState([]);
-    const [fbimg, setFbimg] = useState("");
-    const [isloggedin, setIsloggedin] = useState(false);
+    const [type, setType] = useState("password"); //State for Hide and Unhide password
+    const [error, setError] = useState(false); //State for Hide and Unhide error
+    const [user, setUser] = useState([]); //State for User Details
+    const [fbimg, setFbimg] = useState(""); //State for Profile Image in case of Facebook Login
+    const [isloggedin, setIsloggedin] = useState(false); //State to verify user is LogeedIn or Not
+
+    //Create Refrences fro first name, last name, email address and password  
     let fname = React.createRef();
     let lname = React.createRef();
     let email = React.createRef();
     let password = React.createRef();
 
+    //Function to hide and unhide password by changing th type of input tag 
     const handleClick = () => {
         if(type==="password") setType("text")
         else setType("password")
     }
 
+    //Function for Google Login
     const glogin = () => {
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithPopup(provider)
@@ -33,6 +36,7 @@ export default function Register() {
             })
     }
 
+    //Function for Facebook Login
     const flogin = () => {
         var provider = new firebase.auth.FacebookAuthProvider();
         firebase.auth().signInWithPopup(provider)
@@ -47,12 +51,14 @@ export default function Register() {
             })
     }
 
+    //Function for Logout
     const logout = () => {
         firebase.auth().signOut();
         setIsloggedin(true)
         window.location.reload();
     }
 
+    //Function for Register via entering user details 
     const register = async () => {
         try {
                 if(fname.current.value === "" ||lname.current.value === "" ||email.current.value === "" ||password.current.value === ""|| !(/.+@.+\.[A-Za-z]+$/.test(email.current.value)))
@@ -82,7 +88,8 @@ export default function Register() {
                 <img src={require("../assets/logo.png")} alt="logo" />
             </div>
             <div className="main">
-                {!isloggedin?(
+                {!isloggedin?(                                      
+                    //If user is not loggedIn
                     <>
                         <div className="container">
                             <div className="title-div">
@@ -106,7 +113,8 @@ export default function Register() {
                         <div className="separation">
                             or
                         </div>
-                        {error?(
+                        {error?(                       
+                            //If error occurs
                             <div className="error">
                                 <span className="error-text">
                                         Either some details are missing or user has entered wrong data.
@@ -138,8 +146,9 @@ export default function Register() {
                             </div>
                         </div>
                     </>
-                ):(
-                    <>
+                ):(                                                 
+                    //If user is loggedIn
+                    <>                                             
                         <div className="user-profile">
                             {user.picture ? (
                                 typeof(user.picture)=="string" ? (
