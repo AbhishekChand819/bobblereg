@@ -213,3 +213,122 @@ padding-bottom: 80px;
   width: 6.23em;
   border-radius: 18em;
 }
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 500px) {  
+  .main_container{
+    width: 100%;
+    margin: auto;
+  }
+  .navbar img{
+    width:40%
+  }
+  .main{
+    width: 80%;
+    padding:20px;
+  }
+
+  
+  .title-div{
+    padding-bottom: 40px;
+  }
+  
+  .title{
+    font-size: 15px;
+  }
+  
+  .heading{
+    font-size: 25px
+  }
+  
+  .sub-heading{
+    padding-top:10px;
+    font-size: 10px;
+  }
+  
+  .google_btn,.facebook_btn{
+    padding: 12px;
+    margin: 0px 8px;
+  }
+  
+  .google_btn .text,.facebook_btn .text{
+    font-size: 11px;
+    padding-left: 8px;
+  }
+  
+  .separation {
+    margin: 15px 0px 5px 0px;
+    font-size: 15px;
+  }
+
+  .form{
+    margin: 5px 0px;
+  }
+  
+  .textInput input{
+    padding: 0px 8px;
+    font-size: 15px;
+    height: 30px;
+  }
+  
+  .password-div input{
+    width: 93%;
+  }
+  
+  .password-div img{
+    width: 20px;
+    left: 90%;
+    top: -38px;
+  }
+
+  .policy{
+    text-align: center;
+  }
+  
+  .policy-text{
+    font-size: 10px;
+  }
+  
+  .blue{
+    font-size: 11px;
+  }
+  
+  .signupBtn{
+    padding: 8px;
+    font-size: 15px;
+    margin: 10px auto 10px auto;
+  }
+  
+  .user-profile {
+    width: 17em; 
+    border-radius: .3em;
+  }
+  
+  .user-profile  .username {
+    margin-top: -3.80em;
+    margin-left: 4.0em;
+  }
+  .user-profile  .email {
+    margin-left: 7em;
+  }
+  .user-profile > .user_id {
+    margin-right: -1.2em;
+    width: 14em;
+  }
+  .user-profile > img.avatar {
+    margin-left: 0;
+    height: 4em;
+    width: 4em;
+  }
+  
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
