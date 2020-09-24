@@ -103,7 +103,11 @@ export default function Register() {
                                 <input type="text" placeholder="Email Address" ref={email}></input>
                                 <div className="password-div">
                                     <input type={type} placeholder="Password" ref={password}></input>
-                                    <img src={require("../assets/view.png")} onClick={handleClick} alt="logo"/>
+                                    {type==="text" ? (
+                                        <img src={require("../assets/notview.png")} onClick={handleClick} alt="logo"/>
+                                    ):(
+                                        <img src={require("../assets/view.png")} onClick={handleClick} alt="logo"/> 
+                                    )}
                                 </div>
                             </div>
                             <div className="policy">
