@@ -1,38 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 .App {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.main_container{
+  width: 60%;
+  margin: auto;
+}
+
+.navbar{
   text-align: center;
+  box-shadow: 0px 15px 12px -15px rgba(0, 0, 0, 0.4)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar img{
+  width:15%
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main{
+  width: 50%;
+  margin:40px auto;
+  box-shadow:0px 0px 4px rgba(0, 0, 0, 0.4);
+  padding: 10px 60px 40px 60px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title-div{
+padding-top: 10px;
+text-align: center;
+padding-bottom: 80px;
+}
+
+.title{
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.header{
+  display:flex;
+  text-align: center;
+  flex-direction:column;
+}
+
+.heading{
+  font-size: 35px
+}
+
+.sub-heading{
+  padding-top:20px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.buttons{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.google_btn,.facebook_btn{
+  width: 100%;
+  cursor: pointer;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border-radius: 5px;
+  box-shadow:1px 1px 4px rgba(0, 0, 0, 0.4);
+  padding: 10px 10px;
+  margin: 0px 8px;
+}
+
+.google_btn .text,.facebook_btn .text{
+  font-size: 16px;
+  font-weight: 450;
+  padding-left: 10px;
+}
+
+.google_btn img,.facebook_btn img{
+  width: 25px;
+}
+
+.separation {
+  display:flex;
+  margin: 30px 0px 20px 0px;
+  justify-content:center;
+  align-items: center;
+  color:black;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.separation:before {
+    content: "";
+    filter: blur(0.8px);
+    display: block;
+    background: #c4c4c4;
+    width: 60%;
+    height:1px;
+    margin: 0 10px 0px 0px;
+}
+
+
+.separation:after{
+  content: "";
+  display: block;
+  filter: blur(0.8px);
+  background: #c4c4c4;
+  width: 60%;
+  height:1px;
+  margin: 0 0px 0px 10px;
+}
+
+.form{
+  margin: 10px 0px;
+}
+
+.textInput{
+  display:flex;
+  flex-direction:column;
+  margin:auto;
+}
+
+.textInput input{
+  padding: 0px 20px;
+  font-size: 18px;
+  height: 45px;
+  margin-bottom:10px;
+  margin-top:10px
+}
+
+.password-div input{
+  width: 92.5%;
+}
+
+.password-div img{
+  width: 30px;
+  cursor: pointer;
+  position: relative;
+  left: 90%;
+  opacity: 0.5;
+  top: -50px;
+}
+
+.policy{
+  position: relative;
+  top: -20px;
+}
+
+.policy-text{
+  color: #8c8b8b;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.blue{
+  font-size: 15px;
+  font-weight: 700;
+  color: #03acf1;
+  cursor: pointer;
+}
+
+.signupBtn{
+  background:#03acf1;
+  margin:auto;
+  text-align: center;
+  padding: 14px;
+  cursor: pointer;
   color: white;
+  font-size: 17px;
+  margin: 30px auto 10px auto;
 }
 
-.App-link {
-  color: #61dafb;
+.user-profile {
+  margin: auto;
+	width: 25em; 
+  background: #fff;
+  border-radius: .3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-profile  .username {
+  margin: auto;
+  margin-top: -4.40em;
+  margin-left: 5.80em;
+  color: #658585;
+  font-size: 1.53em;
+  font-family: "Coda", sans-serif;
+  font-weight: bold;
+}
+.user-profile  .email {
+  margin: auto;
+  display: inline-block;
+  margin-left: 10.43em;
+  color: #e76043; 
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+.user-profile > .user_id {
+  margin: auto;
+  margin-top: 1.35em;
+  margin-right: 4.43em;
+  width: 14em;
+  color: #c0c5c5; 
+  font-size: .87em;
+  font-family: "varela round", sans-serif;
+}
+.user-profile > img.avatar {
+	padding: .7em;
+  margin-left: .3em;
+  margin-top: .3em;
+  height: 6.23em;
+  width: 6.23em;
+  border-radius: 18em;
 }
