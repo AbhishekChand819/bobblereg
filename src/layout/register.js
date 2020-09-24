@@ -115,8 +115,8 @@ export default function Register() {
                                     By clicking Sign Up, you agree to our <span className="blue">Terms of Use</span> and our <span className="blue">Privacy Policy.</span>
                                 </span>
                             </div>
-                            <div className="signupBtn">
-                                <span className="text" onClick={register}>SIGN UP</span>
+                            <div className="signupBtn" onClick={register}>
+                                <span className="text">SIGN UP</span>
                             </div>
                         </div>
                     </>
