@@ -215,8 +215,145 @@ padding-bottom: 80px;
 }
 
 
+
+@media only screen and (max-width: 1500px) {
+  .main_container{
+    width: 60%;
+  }
+  .password-div input{
+    width: 92.4%;
+  }
+  .main{
+    width: 70%;
+    padding:20px;
+  }
+  .policy{
+    text-align: center;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1300px) {
+  .main_container{
+    width: 70%;
+  }
+  .main{
+    width: 70%;
+    padding:20px;
+  }
+  .policy{
+    text-align: center;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 1100px) {
+  .main_container{
+    width: 80%;
+  }
+  .navbar img{
+    width: 30%
+  }
+  .main{
+    width: 70%;
+    padding:20px;
+  }
+  
+  .title-div{
+    padding-bottom: 40px;
+  }
+  
+  .title{
+    font-size: 18px;
+  }
+  
+  .heading{
+    font-size: 30px
+  }
+  
+  .sub-heading{
+    padding-top:10px;
+    font-size: 13px;
+  }
+  
+  .google_btn,.facebook_btn{
+    padding: 10px;
+    margin: 0px 8px;
+  }
+  
+  .google_btn .text,.facebook_btn .text{
+    font-size: 12px;
+    padding-left: 8px;
+  }
+  
+  .separation {
+    margin: 20px 0px 10px 0px;
+    font-size: 15px;
+  }
+  
+  .form{
+    margin: 10px 0px;
+  }
+  
+  .textInput input{
+    padding: 0px 8px;
+    font-size: 15px;
+    height: 30px;
+  }
+  
+  .password-div input{
+    width: 95.4%;
+  }
+  
+  .password-div img{
+    width: 20px;
+    left: 92%;
+    top: -38px;
+  }
+  
+  .policy{
+    text-align: center;
+  }
+  
+  .policy-text{
+    font-size: 13px;
+  }
+  
+  .blue{
+    font-size: 14px;
+  }
+  
+  .signupBtn{
+    padding: 10px;
+    font-size: 18px;
+    margin: 10px auto 10px auto;
+  }
+  
+  .user-profile {
+    width: 17em; 
+    border-radius: .3em;
+  }
+  
+  .user-profile  .username {
+    margin-top: -4.30em;
+    margin-left: 4.0em;
+  }
+  .user-profile  .email {
+    margin-left: 7em;
+  }
+  .user-profile > .user_id {
+    margin-right: -1.2em;
+    width: 14em;
+  }
+  .user-profile > img.avatar {
+    margin-left: -2em;
+    height: 5em;
+    width: 5em;
+  }
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 500px) {  
+@media only screen and (max-width: 600px) {  
   .main_container{
     width: 100%;
     margin: auto;
@@ -323,12 +460,3 @@ padding-bottom: 80px;
   }
   
 }
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {}
